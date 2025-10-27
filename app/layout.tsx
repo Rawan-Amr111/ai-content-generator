@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { AppSidebar } from "@/components/AppSidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { HistoryProvider } from "./api/chats/HistoryContext";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +29,27 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <HistoryProvider>
+          <SidebarProvider>
+            <AppSidebar />
+            <main className="w-full min-h-screen flex flex-col ">
+              <SidebarTrigger />
+              <h1
+                className="text-5xl font-bold 
+                 bg-[linear-gradient(to_right,#ffa600,#ff6361,#003f5c)] 
+                 bg-clip-text 
+                 text-transparent
+                 w-fit
+                 mx-auto
+                 my-10
+                 "
+              >
+                AI CONTENT GENERATOR
+              </h1>
+              <div>{children}</div>
+            </main>
+          </SidebarProvider>
+        </HistoryProvider>
       </body>
     </html>
   );
