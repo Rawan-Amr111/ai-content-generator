@@ -5,8 +5,8 @@
 ![Styled with Tailwind](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
 
 A smart, template-based content generator built with **Next.js 14 (App Router)** and powered by the **Google Gemini API**. This application provides a seamless, chat-like experience for generating professional-grade content for various platforms, all while maintaining a persistent, client-side history.
-[Live Demo] (https://ai-content-generator-three-livid.vercel.app/)
 ---
+[Live Demo] (https://ai-content-generator-three-livid.vercel.app/)
 
 ## ✨ Features
 
